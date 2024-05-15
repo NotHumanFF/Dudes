@@ -12,6 +12,8 @@ import toast from 'react-hot-toast';
 import EmojiPicker from 'emoji-picker-react';
 import { AiOutlineClose, AiOutlineMenu, AiOutlineShoppingCart } from 'react-icons/ai'
 import MobileMenu from './MobileMenu';
+import { MdPerson } from 'react-icons/md';
+import { MdGroups } from "react-icons/md";
 
 const socket = io('wss://reactchat-production-f378.up.railway.app/', { transports: ['websocket'] });
 // const socket = io('ws://localhost:8080/', { transports: ['websocket'] });
@@ -200,14 +202,20 @@ const ChatPage = ({ darkMode, setDarkMode }) => {
 
   return (
     <div className='flex h-[100vh]'>
-      <div className='w-[250px] h-[100vh] hidden xl:block lg:block md:block sm:block   bg-[#6674cc] items-center text-white  rounded-md bg- border '>
-        <h2 className="font-normal text-[22px] bg-[#eae4f6] text-richblack-900 p-[24px]">ROOM NO- {room}</h2>
-        <h3 className="font-[500px] text-[18px] mb-[4px]" style={{ padding: '12px 24px 0 24px' }}>Users</h3>
-        <ul className="users">
+      <div className='w-[250px] h-[100vh] hidden xl:block lg:block md:block sm:block   bg-[#2B2D31] items-center text-white  rounded-md  '>
+      <h2 className="font-normal text-[22px] bg-[#1E1F22] text-richblack-900 p-[24px]" style={{ color: '#00B29F' }}>Room - {room}</h2>
+        <div style={{ display: 'flex', alignItems: 'center', padding: '8px 4px 0 8px' }}>
+        <MdGroups  size={24}/>
+        <h3 className="font-[500px] text-[18px] mb-[4px]" style={{ padding: '8px 10px 0 8px' }}>Users</h3>
+        </div>
+        <ul className="users" style={{padding: '12px 0px 0 10px'}}>
           {users.map((user, index) => (
             <li key={index} className='ml-2'>
+              <div style={{ display: 'flex', alignItems: 'center', padding: '2px 4px 0 0px', gap:'3px'}}>
+              <MdPerson size={18} style={{ color: '#00B29F' }}/>
               {user.username}
               <span className="hello"></span>
+            </div>
             </li>
           ))}
 
@@ -228,7 +236,7 @@ const ChatPage = ({ darkMode, setDarkMode }) => {
               </button>
               <button
                 onClick={handleDisconnectConfirmation}
-                className="focus:outline-none relative  focus:ring-2 focus:ring-brand focus:ring-offset-2 cursor-pointer rounded-md bg-brand text-[#fff] bg-[#6674cc] border-brand font-rubik xl:text-lg border px-6 h-12 py-2 flex items-center gap-3 text-lg lg:h-[4rem]"
+                className="btn btn-accent btn-outline"
               >
                 Disconnect
               </button>
@@ -270,7 +278,7 @@ const ChatPage = ({ darkMode, setDarkMode }) => {
             />
             <button
               type="submit"
-              className="focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 cursor-pointer rounded-md bg-brand text-[#fff] bg-[#6674cc] border-brand font-rubik xl:text-lg border xl:px-6 lg:px-6 md:px-6 sm:px-6 h-12 py-2 flex items-center gap-3 text-lg lg:h-[4rem]"
+              className="btn btn-accent btn-secondary"
             >
               Send
               <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
@@ -284,7 +292,7 @@ const ChatPage = ({ darkMode, setDarkMode }) => {
           <button
             id="send-location"
             onClick={handleSendLocation}
-            className="focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 cursor-pointer rounded-md bg-brand text-[#fff] bg-[#6674cc] border-brand font-rubik xl:text-lg border xl:px-6 lg:px-6 md:px-6 sm:px-6 h-12 py-2 flex items-center gap-3 text-lg lg:h-[4rem]"
+            className="btn btn-accent btn-secondary"
           >
             
                 Send location

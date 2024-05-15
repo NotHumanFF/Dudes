@@ -15,6 +15,7 @@ body{
   overflow-x: hidden;
   overflow-y: auto;
   margin: 0;
+  color: #949BA4;
 }
 
 
@@ -107,7 +108,7 @@ circle:nth-child(3) {
 
 
 .message a {
-  color: #0070CC;
+  color: #00B29F;
 }
 
 .hello {
@@ -115,7 +116,7 @@ circle:nth-child(3) {
   width: 10px; /* Set the desired size of the circle */
   height: 10px; /* Set the desired size of the circle */
   border-radius: 50%;
-  background-color: #2ecc71; /* Set the desired green color */
+  background-color: #00B29F; /* Set the desired green color */
   margin-left: 5px; /* Add some spacing between the circle and the username */
 }
 .swal2-popup{

@@ -33,7 +33,7 @@ function App() {
       <AnimatedCursor 
         innerSize={8}
         outerSize={8}
-        color='193, 11, 111'
+        color='0, 118, 118'
         outerAlpha={0.2}
         innerScale={0.7}
         outerScale={5}
@@ -54,10 +54,14 @@ function App() {
       />
     </div>
 
-    <button className="flex justify-end absolute xl:top-2 xl:right-48 top-16 right-5 sm:top-2 sm:right-48 md:top-2 md:right-48  lg:top-2 lg:right-48 z-40  " onClick={hanldeDarkMode}>
-        {darkMode ? <MdModeNight className="xl:text-7xl lg:text-7xl md:text-7xl sm:text-7xl text-6xl  text-white" />: <WiDaySunny  className=" xl:text-7xl lg:text-7xl md:text-7xl sm:text-7xl text-6xl"/> }
-      </button>
-  
+    <button className="flex justify-end absolute xl:top-5 xl:right-34 top-16 right-5 sm:top-2 sm:right-34 md:top-2 md:right-34 lg:top-2 lg:right-48 z-40" onClick={hanldeDarkMode}>
+      {darkMode ? 
+          <MdModeNight className="xl:text-3xl lg:text-3xl md:text-3xl sm:text-3xl text-2xl text-white" /> : 
+          <WiDaySunny className="xl:text-3xl lg:text-3xl md:text-3xl sm:text-3xl text-2xl"/>
+      }
+    </button>
+
+      
       <Routes>
         <Route path="/" element={<HomePage/>}/>
         <Route path="chat" element={<ChatPage darkMode={darkMode} setDarkMode={setDarkMode} />} />

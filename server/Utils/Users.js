@@ -1,8 +1,5 @@
-// first we create an empty array of users  
 const users=[];
 
-
-// add user into the users array
 const addUser=({id,username,room})=>{
 
     // clean the data
@@ -10,7 +7,7 @@ const addUser=({id,username,room})=>{
     room=room.trim().toLowerCase();
 
     // Validate the data
-    if (!username || !room) {
+    if(!username || !room) {
         return {
             error: 'Username and room are required!'
         }
