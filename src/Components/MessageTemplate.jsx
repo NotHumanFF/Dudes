@@ -19,7 +19,7 @@ const MessageTemplate = ({ username, createdAt, message,darkMode }) => {
             </div>
           </div> */}
           <div className="avatar placeholder chat-image avatar">
-            <div className="bg-neutral text-neutral-content rounded-full w-12 ring ring-accent ring-offset-base-100 ring-offset-2">
+            <div className="bg-neutral text-neutral-content rounded-full w-10 ring ring-accent ring-offset-base-100 ring-offset-2">
               <span>{iconName}</span>
             </div>
           </div> 
