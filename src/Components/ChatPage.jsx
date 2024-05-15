@@ -206,7 +206,7 @@ const ChatPage = ({ darkMode, setDarkMode }) => {
       <h2 className="font-normal text-[22px] bg-[#1E1F22] text-richblack-900 p-[24px]" style={{ color: '#00B29F' }}>Room - {room}</h2>
         <div style={{ display: 'flex', alignItems: 'center', padding: '8px 4px 0 8px' }}>
         <MdGroups  size={24}/>
-        <h3 className="font-[500px] text-[18px] mb-[4px]" style={{ padding: '8px 10px 0 8px' }}>Users</h3>
+        <h3 className="font-[500px] text-[18px] mb-[4px]" style={{ padding: '8px 10px 0 8px' }}>Dudes</h3>
         </div>
         <ul className="users" style={{padding: '12px 0px 0 10px'}}>
           {users.map((user, index) => (
