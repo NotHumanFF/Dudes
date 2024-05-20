@@ -13,9 +13,9 @@ npm install
 ```
 
 ### Features:
-1. Private Chat Rooms: Users can create and join private chat rooms for secure and focused conversations.
-2. Instant Messaging: Real-time messaging ensures that users can communicate without delays.
-3. Real-Time Communication: Utilizes Socket.IO for real-time bidirectional communication.
-4. Location sharing: Users can share their location with other users in the chat.
-5. Dark Mode: Toggle between light and dark themes for a comfortable user experience in different lighting conditions.
+1. **Private Chat Rooms:** Users can create and join private chat rooms for secure and focused conversations.
+2. **Instant Messaging:** Real-time messaging ensures that users can communicate without delays.
+3. **Real-Time Communication:** Utilizes Socket.IO for real-time bidirectional communication.
+4. **Location sharing:** Users can share their location with other users in the chat.
+5. **Dark Mode:** Toggle between light and dark themes for a comfortable user experience in different lighting conditions.
 6. Consistent date and time formatting, Responsive design, Animated cursor and many more.
