@@ -1,4 +1,4 @@
-### YoDude - A chat application 
+### Dudes - A chat application 
 
 For the contribution in this project simply follow these steps below:
 
