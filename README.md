@@ -1,4 +1,5 @@
-### Dudes - A chat application 
+### Dudes - A real-time chat app built with React.js and Socket.io for seamless, instant messaging.
+ 
 
 #### Contributing
 We welcome contributions from the community! Whether you're fixing bugs, adding new features, or improving documentation, your input is valuable.
