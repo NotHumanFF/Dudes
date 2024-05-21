@@ -2,11 +2,11 @@ const users=[];
 
 const addUser=({id,username,room})=>{
 
-    // clean the data
+    // clean
     username=username.trim().toLowerCase();
     room=room.trim().toLowerCase();
 
-    // Validate the data
+    // Validate
     if(!username || !room) {
         return {
             error: 'Username and room are required!'
@@ -25,14 +25,13 @@ const addUser=({id,username,room})=>{
         }
     }
     
-    // push into the array
     const user={id,username,room};
     users.push(user);
     return {user}
 
 }
 
-// remove user by id 
+// remove
 const removeUser=(id)=>{
     const index=users.findIndex((user)=>user.id===id)
 
@@ -42,12 +41,12 @@ const removeUser=(id)=>{
     }
 }
 
-// getuser by id 
+// getuser 
 const getUser=(id)=>{
     return users.find((user)=>user.id===id)
 }
 
-// getUsersInRoom by room
+// getUsersInRoom 
 
 const getUsersInRoom=(room)=>{
     room=room.trim().toLowerCase();
