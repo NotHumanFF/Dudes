@@ -13,20 +13,16 @@ const RootComponent = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Check if it's the initial load or a reload
     const isReload = sessionStorage.getItem("isReloaded");
 
     if (isReload) {
-      // If it's a reload, disable the loader immediately
       setIsLoading(false);
     } else {
-      // If it's the initial load, set a flag in sessionStorage and show the loader
       sessionStorage.setItem("isReloaded", "true");
 
-      // Simulate an async operation (e.g., loading data)
       setTimeout(() => {
-        setIsLoading(false); // Set isLoading to false when done loading
-      }, 2000); // Simulate a 2-second loading time (replace with your actual loading logic)
+        setIsLoading(false); 
+      }, 2000);
     }
   }, []);
 
