@@ -5,8 +5,6 @@ import { io } from 'socket.io-client';
 import './HomePage.css'
 
 import CookieAlert from './CookieAlert'
-
-
 const HomePage = () => {
 
   const socket = io('wss://reactchat-production-f378.up.railway.app/', { transports: ['websocket'] });
@@ -28,11 +26,6 @@ const HomePage = () => {
         navigate(`chat?username=${formData.username}&room=${formData.room}`);
     }
 
-   
-
-
-
-    
   return (
     <div>
  <div className="w-screen h-screen flex justify-center items-center">
@@ -75,11 +68,7 @@ const HomePage = () => {
   </div>
 </div>
 
-
-   
   <CookieAlert/>
-
-
 
 </div>
   )
