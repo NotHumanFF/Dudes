@@ -10,13 +10,11 @@ import { MdModeNight } from "react-icons/md";
 
 
 function App() {
-    // Retrieve dark mode state from local storage or default to false
     const [darkMode, setDarkMode] = useState(() => {
       const savedDarkMode = localStorage.getItem("darkMode");
       return savedDarkMode ? JSON.parse(savedDarkMode) : false;
     });
   
-    // Update local storage when dark mode state changes
     useEffect(() => {
       localStorage.setItem("darkMode", JSON.stringify(darkMode));
     }, [darkMode]);
