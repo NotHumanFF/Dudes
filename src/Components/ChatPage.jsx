@@ -40,12 +40,10 @@ const ChatPage = ({ darkMode, setDarkMode }) => {
 
 
   // Options
-  // this will work only if there is ? mark in url 
   const { username, room } = Qs.parse(location.search, { ignoreQueryPrefix: true });
 
   socket.emit('join', { username, room }, (error) => {
     if (error) {
-      // Display popup if the user is already in a room
       // Swal.fire({
       //   title: 'Already in Room',
       //   text: 'You are already in a room. Redirecting to home page...',
@@ -227,10 +225,8 @@ const ChatPage = ({ darkMode, setDarkMode }) => {
             <div className=' flex'>
               <button className="mr-4 sm:hidden" onClick={toggleMenu}>
                 {isMenuOpen ? (
-                  /* If menu is open, display close icon */
                   <AiOutlineClose className="w-10    rounded-md bg-headText py-[2px] transition-all duration-300" fontSize={50} fill="#AFB2BF" />
                 ) : (
-                  /* If menu is closed, display menu icon */
                   <AiOutlineMenu className="w-10  rounded-md bg-headText py-[2px] transition-all duration-300" fontSize={50} fill="#AFB2BF" />
                 )}
               </button>
@@ -314,10 +310,7 @@ const ChatPage = ({ darkMode, setDarkMode }) => {
                 </svg>
           </button>
 
-
         </div>
-
-
 
       </div>
 
