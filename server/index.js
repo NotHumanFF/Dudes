@@ -34,7 +34,6 @@ const io = socketio(server, {
 });
 
 
-// Socket.IO CORS middleware
 io.use((socket, next) => {
     // Set CORS headers for Socket.IO requests
     socket.handshake.headers.origin = socket.handshake.headers.referer;
