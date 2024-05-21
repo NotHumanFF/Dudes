@@ -10,6 +10,7 @@
     "profanity": "^0.0.2",
     "socket.io": "^4.7.5"
   },
+  
   "name": "server",
   "version": "1.0.0",
   "main": "index.js",
