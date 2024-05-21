@@ -4,12 +4,10 @@ const CookieAlert = () => {
   const [showAlert, setShowAlert] = useState(false);
 
   useEffect(() => {
-    // Show the alert after a short delay to allow the animation to take effect
+    // Showalert
     const timer = setTimeout(() => {
       setShowAlert(true);
     }, 500);
-
-    // Clean up the timer
     return () => clearTimeout(timer);
   }, []);
 
